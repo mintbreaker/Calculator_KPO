@@ -100,7 +100,22 @@ namespace Calculator_KPO
             DigitsGrid.Children.Add(ClearAll);
             Grid.SetRow(ClearAll, 3);  // Устанавливаем строку кнопки в Grid
             Grid.SetColumn(ClearAll, 0); // Устанавливаем столбец кнопки в Grid
-        
+
+
+
+            Button exitButton = new Button();
+            exitButton.Content = "X";
+            exitButton.Width = 35;
+            exitButton.Height = 35;
+            //exitButton.Margin = new Thickness(10);
+            exitButton.HorizontalAlignment = HorizontalAlignment.Right;
+            exitButton.VerticalAlignment = VerticalAlignment.Bottom;
+            exitButton.Click += (sender, e) => FunctionCalculate.ExitButton_Click(sender, e);
+
+            // Добавляем кнопку в RootGrid
+            RootGrid.Children.Add(exitButton);
+            Grid.SetRow(exitButton, 0);  // Устанавливаем строку кнопки в Grid
+            Grid.SetColumn(exitButton, 0); // Устанавливаем столбец кнопки в Grid
 
         }
 

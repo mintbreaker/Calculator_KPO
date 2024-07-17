@@ -153,5 +153,12 @@ namespace Calculator_KPO
             }
         }
 
+
+        public static void ExitButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Логика для закрытия окна
+            Application.Current.MainWindow.Close();
+        }
+
     }
 }

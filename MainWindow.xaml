@@ -53,5 +53,20 @@
             </Grid.ColumnDefinitions>
         </Grid>
 
+        <Grid x:Name="RootGrid"
+            Grid.Row="1"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+            Margin="50, 370, 0, 0"> 
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+        </Grid>
+
     </Grid>
 </Window>
