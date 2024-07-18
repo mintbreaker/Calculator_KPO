@@ -53,7 +53,7 @@ namespace Calculator_KPO
 
         public static void EqualsButton_Click(object sender, RoutedEventArgs e, TextBox displayTextBox)
         {
-            if (previousNumber != 0 && !string.IsNullOrEmpty(operation) && displayTextBox.Text != "")
+            if (/*previousNumber != 0 &&*/ !string.IsNullOrEmpty(operation) && displayTextBox.Text != "")
             {
                 // Получаем текущее число из текстового поля
                 currentNumber = double.Parse(displayTextBox.Text);
