@@ -60,7 +60,7 @@ namespace Calculator_KPO
             if (textBox != null)
             {
                 // Проверяем, является ли введенный символ цифрой или запятой
-                if (!char.IsDigit(e.Text, 0) && e.Text != ",")
+                if (!char.IsDigit(e.Text, 0) && e.Text != "," && e.Text != "-")
                 {
                     e.Handled = true; // Если символ не цифра и не запятая, игнорируем его
                     return;

@@ -61,6 +61,14 @@ namespace Calculator_KPO
                 // Выполняем операцию между previousNumber и currentNumber
                 PerformOperation();
 
+                // Проверяем, было ли выполнено деление на ноль
+                if (operation == "/" && currentNumber == 0)
+                {
+                    MessageBox.Show("Деление на ноль невозможно!");
+                    displayTextBox.Text = ""; // Очищаем TextBox
+                    return;
+                }
+
                 //Очищаем в TextBox
                 displayTextBox.Text = "";
 
@@ -134,8 +142,7 @@ namespace Calculator_KPO
                     }
                     else
                     {
-                        // Обработка деления на ноль
-                        // Например, можно вывести сообщение об ошибке или сделать другие действия
+                        //MessageBox.Show("Делене на ноль невозможно!");
                     }
                     break;
                 default:
