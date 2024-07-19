@@ -58,13 +58,11 @@ namespace Calculator_KPO
                 // Получаем текущее число из текстового поля
                 currentNumber = double.Parse(displayTextBox.Text);
 
-                // Выполняем операцию между previousNumber и currentNumber
-                PerformOperation();
-
                 if (operation == "/" && previousNumber == 0 && currentNumber != 0)
                 {
                     displayTextBox.Text = "";
                     UpdateLastOperationLabel($"{previousNumber}");
+                    displayTextBox.Focus();
                     return;
                 }
                 // Проверяем, было ли выполнено деление на ноль
@@ -72,8 +70,12 @@ namespace Calculator_KPO
                 {
                     MessageBox.Show("Деление на ноль невозможно!");
                     displayTextBox.Text = ""; // Очищаем TextBox
+                    displayTextBox.Focus();
                     return;
                 }
+
+                // Выполняем операцию между previousNumber и currentNumber
+                PerformOperation();
 
                 //Очищаем в TextBox
                 displayTextBox.Text = "";
@@ -82,7 +84,11 @@ namespace Calculator_KPO
 
                 // Обновляем Label после вычисления
                 UpdateLastOperationLabel($"{previousNumber}");
+
+                displayTextBox.Focus();
             }
+
+            displayTextBox.Focus();
         }
 
 
@@ -98,6 +104,7 @@ namespace Calculator_KPO
 
                 // Обновляем Label с последней операцией
                 lastOperationLabel.Content = $"{previousNumber} {operation}";
+                displayTextBox.Focus();
                 return;
 
             }
@@ -125,6 +132,8 @@ namespace Calculator_KPO
 
                 // Очищаем TextBox для ввода следующего числа
                 displayTextBox.Text = "";
+
+                displayTextBox.Focus();
             }
         }
 

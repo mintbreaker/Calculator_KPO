@@ -22,6 +22,7 @@ namespace Calculator_KPO
 
             InitializeComponent();
 
+            DisplayTextBox.Focus();
 
             string[] operationSymbols = new string[] { "+", "-", "/", "*" };
 
