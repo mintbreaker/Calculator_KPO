@@ -89,8 +89,10 @@ namespace Calculator_KPO
             if (clickedButton != null && displayTextBox.Text == "")
             {
                 operation = clickedButton.Content.ToString();
-                
-                lastOperationLabel.Content += " " + operation;
+
+                // Обновляем Label с последней операцией
+                lastOperationLabel.Content = $"{previousNumber} {operation}";
+                return;
 
             }
 
